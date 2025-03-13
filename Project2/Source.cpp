@@ -5,7 +5,16 @@
 using namespace std;
 
 void NumberOfVowels(string str1, int& res) {
-	
+	// Функция на количество гласных
+	char all_vowels[10] = { 'a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U' };
+
+	for (int i = 0; i < str1.length(); i++)
+	{
+		for (int j = 0; j < 10; j++) {
+			if (str1[i] == all_vowels[j])
+				res++;
+		}
+	}
 }
 
 void ChangeCaseOfLetters(string& str2) {
