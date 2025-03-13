@@ -28,7 +28,10 @@ void ChangeCaseOfLetters(string& str2) {
 }
 
 void RemovePunctuationMarks(string str3, string& res) {
-	
+	for (char c : str3) {
+		if (isalnum(c) || isspace(c))
+			res += c;
+	}
 }
 
 void PalindromeTest(string str4, string& res) {
