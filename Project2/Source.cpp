@@ -28,6 +28,7 @@ void ChangeCaseOfLetters(string& str2) {
 }
 
 void RemovePunctuationMarks(string str3, string& res) {
+	// Функция удаления знаков препинания и прочих символов мз строки
 	for (char c : str3) {
 		if (isalnum(c) || isspace(c))
 			res += c;
@@ -35,7 +36,31 @@ void RemovePunctuationMarks(string str3, string& res) {
 }
 
 void PalindromeTest(string str4, string& res) {
-	
+	// Функция палиндром
+	bool flag = true;
+	int len = str4.length();
+	string newstr4;
+
+	for (char c : str4) {
+		if (!isspace(c))
+			newstr4 += c;
+	}
+
+	len = newstr4.length();
+
+	for (int i = 0; i < len / 2; i++)
+	{
+		if (newstr4[i] != newstr4[len - 1 - i])
+		{
+			flag = false;
+			break;
+		}
+	}
+
+	if (flag == 1)
+		res = "palindrome";
+	else
+		res = "not palindrome";
 }
 
 int main() {
