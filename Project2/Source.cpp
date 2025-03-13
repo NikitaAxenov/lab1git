@@ -18,7 +18,13 @@ void NumberOfVowels(string str1, int& res) {
 }
 
 void ChangeCaseOfLetters(string& str2) {
-	
+	// Функция смены регистра букв в строке
+	for (int i = 0; i < str2.length(); i++) {
+		if (str2[i] >= 65 && str2[i] <= 92)
+			str2[i] += 32;
+		else if (str2[i] >= 97 && str2[i] <= 122)
+			str2[i] -= 32;
+	}
 }
 
 void RemovePunctuationMarks(string str3, string& res) {
